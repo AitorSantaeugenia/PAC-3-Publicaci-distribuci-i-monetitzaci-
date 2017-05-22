@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PAC#3 Publicaci&oacute;, distribuci&oacute; i monetitzaci&oacute;</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+	
+	
+<body background="img/bg_test.jpg">
+<header class="w3-container w3-blue">
+  <h1>PAC#3 Publicaci&oacute;, distribuci&oacute; i monetitzaci&oacute;
+</h1>
+</header>
+		<!-- MENU NORMAL -->
+		<nav class="nav nav--red">
+			<ul class="nav__list">
+			<li class="nav__list__item"><a href="pac3.html" >PAC3 PDM</a></li>
+			<li class="nav__list__item"><a href="test_1.html" >PAC3 PDM VIDEO</a></li>
+			</ul>
+		</nav>
+		<br>
+		<!-- MENU EXERCICIS -->
+		<nav class="nav nav--red">
+			<ul class="nav__list">
+		
+			</ul>
+		</nav>
+
+
+
+<div class="w3-row-padding w3-section">
+
+
+		<div align="center">
+			<div class="w3-container w3-light-grey">
+				<p><ul>
+				  <li style="text-align: left; border-bottom:1px solid black;"><strong>Part I - Monetització de vídeos mitjançant anuncis</strong></li>
+				  <li style="text-align: left; margin-left:30px; border-bottom:1px solid red;">Activitat 3.1</li>
+				  <p style="text-align: left;">
+				  Primer de tot <strong>tocarà descarregar la versió que ens penjen en l’aula de l’assignatura</strong>, doncs en altres versions que varem provar, podem veure com no existeix la carpeta que s’ens demana. Així doncs, amb un cop la versió que toca podem veure el fitxer index.html amb un editor i l’estructura creada per que funcioni. Podem observar que:
+					</p style="text-align: left;">
+					<p style="text-align: left;">- Com es carreguen els diferents plugins per l’execució del video</p>
+					<p style="text-align: left;"> - La variable <strong><i>apiAddress</i></strong> que realitza una cridada a <i><strong>vast.xml</strong></i></p>
+						<img src="img/1.png" alt="Imatge#1">
+					<p style="text-align: left;">
+					Un cop dins de l’arxiu vast.xml podem veure el conjunt de variables que aquest empra per a realitzar les diferents funcions les quals analitzarem amb més profunditat en el següent punt.
+					Al mateix temps, si executem el index.html podem veure com s’inicia el video sense cap tipus de publicitat, és a dir, no está funcionant doncs no tenim un web server funcionant.
+					</p>
+						<img src="img/2.png" alt="Imatge#2" >
+				  </p>
+				  <li style="text-align: left; margin-left:30px; border-bottom:1px solid red;">Activitat 3.1.1</li>
+				  <p style="text-align: left;">
+				  Primerament ens dipossarem a identificar les diferents etiquetes per a saber, a l’hora de la configuració, de que tracta cadascuna. Així doncs:</p>
+<p style="text-align: left; margin-left:30px;">- <span style="color:red">&lt;ad&gt;</span>: Contenidor de tota la informació on juntament amb el paràmetre <span style="color:red">&lt;id&gt;</span> serveix per identificar d’on venen les cridades.</p>
+<p style="text-align: left; margin-left:30px;">- <span style="color:red">&lt;Impression&gt;</span>: Paràmetre obligatori que identifica la URL la qual el player farà una crida HTTP just una creativitat es mostri.
+<p style="text-align: left; margin-left:30px;">- <span style="color:red">&lt;Creatives&gt;</span>: la qual pot incloure una o més <span style="color:red">&lt;Creative&gt;</span> és la resposta d’una creativitat. Dins del <span style="color:red">&lt;Creative&gt;</span> hi ha tota la definició que s’ha de mostrar, incloent-hi el tipus via l’etiqueta <Linear>, la durada I demés paràmetres</p>
+<p style="text-align: left; margin-left:30px;">- <span style="color:red">&lt;TrackingEvents&gt;</span>: Serveix per fer un seguiment més exhastiu del que succeeix amb les etiquetes <span style="color:red">&lt;Creative&gt;</span>. Té els esdeveniments <i>“Start” i “Complete”, “midpoint”, “firstQuartile”, “thirdQuartile”, “mute”, “unmute”, “pause”, “rewind”, “resume”, “fullscreen”, “expand”, “collapse”, “acceptInvitationclose”</i>.</p>
+<p style="text-align: left; margin-left:30px;">- <span style="color:red">&lt;VideoClicks&gt;</span>: Indica quan s’ha d’invocar una URL si l’usuari ha clicat sobre les creativitats. Pot tenir diversos paràmetres però els més comúns són els paràmetres <ClickThrough> que indica la URL que s’ha d’enviar qual l’usuari ha fet click, I el paràmetre <ClickTracking> que indica la URL del ad-server que registrarà el fet.</p>
+<p style="text-align: left; margin-left:30px;">- <span style="color:red">&lt;MediaFiles&gt;</span>: Composen un llistat de creativitats a mostrar.</p>
+<p style="text-align: left; margin-left:30px;">Tot i a ja poseir d’un webserver en el nostre ordinador, instal·larem el Mongoose per tal de conèixer noves eines. Així doncs accedim a la web <a href="https://www.cesanta.com/products/binary">https://www.cesanta.com/products/binary</a> i procedim a deixar el .exe en la carpeta on tenim que realitzar les posteriors tasques del treball.
+
+Un cop descarregat, si l’executem podem veure com ens apareixen tots els documents que hi ha en la carpeta on es trova l’executador del Mongoose</p>
+					<img src="img/3.png" alt="Imatge#3" >
+<p style="text-align: left; margin-left:30px;">Aquí si accedim a la carpeta on es trova el index.html podem observar com ara hi ha l’anunci de pepsi que podem veure en el contingut de carpetes proporcionades per l’anunciat de la pràctica, volent dir que ara ja si que tenim un web server funcionant.</p>
+				  <img src="img/4.png" alt="Imatge#4" >
+				  <li style="text-align: left; margin-left:30px; border-bottom:1px solid red;">Activitat 3.1.2</li>
+<p style="text-align: left; margin-left:30px;"> Com a vídeo, emprarem el vídeo que varem crear de cinc minuts sobre el funcionament del procés que varem realitzar en la PAC#2. Així doncs, el primer que farem será introduir-lo dins de la carpeta vídeo, juntament amb el de “bunny.mp4” que és el que hem reproduit anteriorment.</p>
+				  <img src="img/5.png" alt="Imatge#5" >
+<p style="text-align: left; margin-left:30px;">Un cop hem introduit el vídeo en la carpeta, tenim que fer que el fitxer del index.html apunti a aquest. Per fer-ho, només tindrem que canviar la línia de codi número 13, on apareix la ruta del vídeo, canviant el nom del vídeo per a videoPAC2 que és el nostre.</p>
+				   <img src="img/6.png" alt="Imatge#6" >
+<p style="text-align: left; margin-left:30px;">Tot seguit, podem veure com si reproduim ara el vídeo, apareixerà el nostre en lloc del “bunny.mp4”.</p>
+				    <img src="img/7.png" alt="Imatge#7" >
+<p style="text-align: left; margin-left:30px;">Al mateix temps, tenim que introduir com a “ad” l’anunci de la UOC. Per fer això, tindrem que obrir l’arxiu vast.xml i canviar les línies de codi número “45” i número “98” posant la ruta de la UOC, que no és més que la variable “ClickThrough”. Té que quedar com a  continuació:</p>
+				  <img src="img/8.png" alt="Imatge#8" >
+<p style="text-align: left; margin-left:30px;">Finalment només ens quedarà la configuració del pre-roll I mid-roll. Per fer-ho tenim que modificar el codi dins de l’arxiu “index.html”. Aquí programarem el ad per a l’inici del vídeo (pre-roll) i per al llarg del vídeo, al cap de 5 minuts (mid-roll).</p>
+				  <img src="img/9.png" alt="Imatge#9" >
+				  <li style="text-align: left; border-bottom:1px solid black;"><strong>Part II - Planificació de campanyes mitjançant un AD-server</strong></li>
+				  
+				  
+				  
+				  
+				  
+				  
+<li style="text-align: left; margin-left:30px; border-bottom:1px solid red;">Activitat 3.2</li>
+<p style="text-align: left; margin-left:30px;">Per fer aquest exercici, he elegit fer-ho sobre el Atlas Solutions, de Facebook que el va comprar a Microsoft el Febrer del 2013.
+	Aquest també funciona per la implementació de <tags> les quals podem veure en l’enllaç de a continuació: <a href="https://atlassolutionstwo.files.wordpress.com/2015/07/atlas-tag-implementation-guide-for-all-publishers.pdf">https://atlassolutionstwo.files.wordpress.com/2015/07/atlas-tag-implementation-guide-for-all-publishers.pdf</a>
+	Atlas té tres punts claus per a definir l’estructura amb la qual está implementada, les quals vindríen a ser tres indicacions que volem definir I crear la diferència sobre la resta d’implementacions similars. Aquestes son:</p>
+	<p style="text-align: left; margin-left:30px;">- <span style="color:red">“Cross-Evertything”</span>: Pots saber I mesurar clicks reals sempre que un contingut ha estat clicat sigui quin sigui el dispositiu, canals o publicadors.</p>
+<p style="text-align: left; margin-left:30px;">- <span style="color:red">“Consumer-led”</span>: Va dirigit als consumidors. Tens la posibilitat de secuenciar, remarcar o realitzar altres serveis per tal de adquirir avantatges sobre competidors (altres “publishers”), fent que puguis crear una “campanya” més eficient I amb un nom propi que la resta.</p>
+<p style="text-align: left; margin-left:30px;">- <span style="color:red">“Value”</span>: Aporta valor al teu negoci amb un marqueting basat en la gent impulsat per la precisió I la persistència. Poden millorar el resultat I el presupost. Al mateix temps disposa d’una calculadora on-line.</p>
+<p style="text-align: left; margin-left:30px;">Un cop hem esmentat els tres punts claus d’aquesta tecnología, començarem amb els &lt;tag&gt; I la implementació d’aquests. Tots, els podem trovar en la següent publicació baix l’extensió .pdf: <a href="https://atlassolutionstwo.files.wordpress.com/2015/07/atlas-tag-implementation-guide-for-all-publishers.pdf">https://atlassolutionstwo.files.wordpress.com/2015/07/atlas-tag-implementation-guide-for-all-publishers.pdf</a></p>
+<p style="text-align: left; margin-left:60px;">- Empra <span style="color:red">“Publisher Cache-Buster”</span>: Molta media és sol quedar en la memòria cache de l’usuari consumidor I no és pot establir si s’ha clicat o no un altre cop, doncs certs serveis ho implementen com una altre reproducció. Amb aquest <tag> és pot solucionar aquest “error”. Per fer-ho, s’empre la etiqueta “;cache=” just després del click.</p>
+				<img src="img/10.png" alt="Imatge#10" >
+<p style="text-align: left; margin-left:60px;">- <span style="color:red">Etiquetes de seguiment</span>: Tens l’habilitat de crear etiquetes de seguiment inclòs quan Atlas no està oferint servei creatiu.</p>
+<p style="text-align: left; margin-left:90px;"><span style="color:red">URLs específiques de la ubicació</span>: Per defecte, la impressió I tags generats en el trafic per el seguiment representen el lloc baix la etiqueta p=paràmetre. Com:</p>
+<img src="img/11.png" alt="Imatge#11" >
+<p style="text-align: left; margin-left:90px;"><span style="color:red">URL impressió</span></p>
+<img src="img/12.png" alt="Imatge#12" >
+<p style="text-align: left; margin-left:60px;"><span style="color:red">- Afegir URL específiques</span>: Et permet realitzar el seguiment per cada píxel assignat a un lloc. Aquests pixels contenen una URL amb el valor id emprant el parèmtre a=parametre.</p>
+<p style="text-align: left; margin-left:90px;">- <span style="color:red">- URL impressió</span></p>
+<p style="text-align: left; margin-left:90px;">- <span style="color:red">- Click URL</span></p>
+
+<p style="text-align: left; margin-left:60px;">- <span style="color:red">Implementació de paràmetres ID per a dispositius mòbils</span>: La majoría dels &lt;tag&gt; son compatibles per a qualsevol dispositiu. Hi ha una guía de com fer-ho a la següent direcció online: <a href="https://atlassolutions.com/publishers/#implementation">https://atlassolutions.com/publishers/#implementation</a></p>
+<p style="text-align: left; margin-left:60px;">- <span style="color:red">Publicació “hard-core” de macros</span>: S’utilitzen macros per tal de garantitzar la coherència del programa.</p>
+<p style="text-align: left; margin-left:60px;">- <span style="color:red">Redirecció de clicks a Atlas</span>:  S’empren gràcies al paràmetre <span style="color:red">?h = paràmetre</span>. Només està controlat per Atlas.</p>
+<p style="text-align: left; margin-left:60px;">- <span style="color:red">Paràmetres de Jquery</span>: Per implementar-ho, s’ha d’emprar <span style="color:red">;qpb=1</span> per a la redirecció a Atlas, seguit per <span style="color:red">(?)</span> I altres paràmetres de configuració.</p>
+<p style="text-align: left; margin-left:60px;">- <span style="color:red">Aplicació del seguiments de clicks del creador de contingut</span>: S’ha d’emprar l’etiqueta <span style="color:red">“?click=”</span> per a traquejar el codi, amb el paràmetre normalment de <span style="color:red">“Encoded”</span>.</p>
+<img src="img/15.png" alt="Imatge#15" >		
+<p style="text-align: left; margin-left:60px;">- <span style="color:red">Aplicació a Javascript o Iframe tags</span>: Per fer-ho només s’ha d’emprar el codi proporcionat per atlas, el qual és el de a continuació:</p>
+<p style="text-align: left; margin-left:90px;">- <span style="color:red">Javascript</span>:</p>
+<img src="img/16.png" alt="Imatge#16" >	
+<p style="text-align: left; margin-left:90px;">- <span style="color:red">Iframe</span>:</p>
+<img src="img/17.png" alt="Imatge#17" >	
+<p style="text-align: left; margin-left:60px;">- <span style="color:red">Etiquetes de vídeo</span>: Atlas té suport de <span style="color:red">VAST 2.0</span> I <span style="color:red">VAST 3.0</span>.</p>
+<p style="text-align: center;"> PODEM VEURE EL VIDEO EN EL SEGÜENT ENLLAÇ -> <a href="test_1.html" style="text-decoration:none"> <span style="color:red">VIDEO </span></a>
+
+		</ul></p><br/>
+			</div><br/><br/>
+		</div>
+</div>
+
+<footer class="w3-container w3-blue">
+  <p>CC BY-NC-SA | 2016 | Aitor Javier Santaeugenia Mar&iacute; |
+  Todo contenido de esta web &eacute;s de uso acad&eacute;mico. |
+  <a href="https://github.com/AitorSantaeugenia"> GITHUB </a>
+</p>
+</footer>
+</body>
+
+</html>
