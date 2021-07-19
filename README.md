@@ -1,5 +1,5 @@
-# PAC#3 Publicació, distribució i monetització
-PAC#3 Publicació, distribució i monetització || **Monetització de vídeos mitjançant anuncis**
+# Monetització de vídeos mitjançant anuncis
+PAC#3 Publicació, distribució i monetització
 - Using VAST.xml for the ADs
 
 CC-BY-NC-SA
